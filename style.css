@@ -418,9 +418,9 @@
   border: 2px solid;
 }  */
 
-/* grid----------------------- */
+/* grid container----------------------- */
 
-.container {
+/* .container {
   border: 4px solid;
   display: grid;
   grid-template-rows: repeat(4, 100px);
@@ -431,11 +431,11 @@
     ". . aside"
     "footer footer footer";
   /* grid-gap: 10px 40px; */
-  grid-row-gap: 10px;
+/* grid-row-gap: 10px;
   grid-column-gap: 40px;
-}
+} */
 
-.container > * {
+/* .container > * {
   border: 2px solid;
 }
 .container header {
@@ -449,4 +449,253 @@
 }
 .container footer {
   grid-area: footer;
+}  */
+
+/* grid container----------------------- */
+/* 
+.container {
+  width: 300px;
+  height: 300px;
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
 }
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 20px;
+}
+.container .item:nth-child(1) {
+  grid-column-start: span 2;
+}
+.container .item:nth-child(2) {
+  grid-row-start: span 2;
+}
+.container .item:nth-child(3) {
+  grid-column-start: span 3;
+} */
+
+/* grid items----------------------- */
+
+/* .container {
+  width: 300px;
+  height: 300px;
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 20px;
+}
+.container .item:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+} */
+
+/* grid items----------------------- */
+
+/* .container {
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: 100px 200px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 30px;
+}
+.container .item:nth-child(1) {
+  grid-row: 4;
+}
+.container .item:nth-child(3) {
+  height: 200px;
+  grid-row: 3;
+} */
+
+/* grid Items 2----------------------- */
+
+/* .container {
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: fit-content(300px) fit-content(300px);
+}
+
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 30px;
+} */
+
+/* grid에서 컨테이너에서 사용가능한 function----------------------- */
+
+/* .container {
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 100px 100px 1fr 2fr;
+}
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+} */
+/* grid에서 컨테이너에서 사용가능한 function2----------------------- */
+
+/* .container {
+  border: 4px solid;
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: repeat(4, min-content);
+}
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 30px;
+  word-break: keep-all;
+} */
+/* grid에서 컨테이너에서 사용가능한 function2----------------------- */
+
+/* .container {
+  border: 4px solid;
+  display: grid;
+  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.container .item {
+  border: 2px solid;
+  background-color: orange;
+  font-size: 30px;
+} */
+
+/* grid에서 컨테이너에서 사용가능한 function2----------------------- */
+
+/* .container {
+  width: 150px;
+  height: 150px;
+  border: 4px solid;
+  margin: 100px;
+  perspective: 300px;
+  perspective-origin: 50% 50%;
+}
+
+.container .item {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  transition-duration: 1s;
+}
+
+.container .item:hover {
+  transform: rotateY(45deg);
+} */
+
+/* Transform 3D----------------------- */
+
+/* .container {
+  width: 150px;
+  height: 150px;
+  border: 4px solid;
+  margin: 100px;
+  perspective: 300px;
+  transform: perspective(300px) rotateX(45deg);
+  transform-style: preserve-3d;
+}
+
+.container .item {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  transform: rotateY(45deg);
+  transform-style: preserve-3d;
+}
+
+.container .item .box {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  transform: rotateX(45deg);
+} */
+
+/* Transform 3D----------------------- */
+
+/* .container {
+  width: 150px;
+  height: 200px;
+  border: 4px solid;
+  perspective: 300px;
+}
+
+.container .item {
+  width: 150px;
+  height: 200px;
+  background-color: orange;
+  font-size: 60px;
+  transition-duration: 1s;
+  backface-visibility: hidden;
+}
+.container .item.front {
+  background-color: orange;
+  position: absolute;
+}
+.container .item.back {
+  background-color: royalblue;
+  transform: rotateY(-180deg);
+}
+.container:hover .item.front {
+  transform: rotateY(180deg);
+}
+.container:hover .item.back {
+  transform: rotateY(0);
+} */
+
+/* Transform 3D----------------------- */
+
+/* .container {
+  border: 4px solid;
+  /* columns: 300px 3; */
+/* column-count: 3;
+  column-width: auto;
+  /* column-rule: 4px dotted blue; */
+/* column-rule-width: 4px;
+  column-rule-style: dashed;
+  column-rule-color: red;
+  column-gap: 40px; */
+/* } */
+
+/* CSS-Columns----------------------- */
+
+.container {
+  filter: hue-rotate(300deg);
+}
+
+.container .item {
+  width: 120px;
+  height: 120px;
+  background-image: linear-gradient(orange, royalblue);
+}
+
+.container img {
+  width: 220px;
+}
+
+.cover {
+  width: 150px;
+  height: 200px;
+  border: 4px solid;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  backdrop-filter: blur(10px) grayscale();
+}
+
+/* CSS-Filter----------------------- */
